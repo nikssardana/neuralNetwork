@@ -40,3 +40,31 @@ for j in range(N):
             bestSum = summation
 T = bestSum + 1
 print "Threshold: ",T
+
+'''
+Hebb Network Algorithm
+
+Inputs = -1 or 1
+Weights = -1 or 1
+
+Output = 1 if Summation(Ii * Wi >= T)
+           = 0 if Summation < 0
+
+Algo:
+	Initialise Wi = 0 for all i
+	For each input vector j and output value y:
+		For each weight Wi:
+			Wi(new) = Wi + Xi*Wi for all i
+	Yin = maxNegY = X0*W0
+	Find out the max value of Yin for which the output should be -1. Threshold T is this value.
+
+	For each output Yj:
+		summation = 0
+		if Yj == -1:
+			For each weight Wi in jth row:
+				summation += Wi * Xi
+			if summation > bestSum:
+				bestSum = summation
+	T = bestSum
+Answer = All weights and T
+'''
