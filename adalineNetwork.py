@@ -1,5 +1,3 @@
-import random
-
 N = int(raw_input('Enter number of cases: '))
 alpha = float(raw_input('Enter learning rate(0 to 1.0): '))
 
